@@ -3,7 +3,6 @@ package com.example.easymove
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import retrofit2.Call
@@ -20,7 +19,6 @@ class EnderecoActivity : AppCompatActivity() {
         val txvCEP: TextView = findViewById(R.id.txvCEP)
         val uf: TextView = findViewById(R.id.txvUF)
         val bairro: TextView = findViewById(R.id.txvBairro)
-        val progress_bar: ProgressBar = findViewById(R.id.progress_bar)
         val logradouro: TextView = findViewById((R.id.txvLogradouro))
         val btnPronto: Button = findViewById(R.id.btnPronto)
         val nr: EditText = findViewById(R.id.numero)
@@ -31,7 +29,6 @@ class EnderecoActivity : AppCompatActivity() {
 
         pesquisaCEP.setOnClickListener {
 
-            progress_bar.visibility = View.VISIBLE
 
             val call = RetrofitFactory().retrofitService().getCEP(cep.text.toString())
 
@@ -46,7 +43,6 @@ class EnderecoActivity : AppCompatActivity() {
                         uf.text = it.uf
                         txvCEP.text = it.cep
                         bairro.text = it.bairro
-                        progress_bar.visibility = View.INVISIBLE
                     } ?: Toast.makeText(this@EnderecoActivity, "CEP não localizado", Toast.LENGTH_LONG)
                         .show()
 
@@ -54,7 +50,6 @@ class EnderecoActivity : AppCompatActivity() {
 
                 override fun onFailure(call: Call<CEP>?, t: Throwable?) {
                     t?.message?.let { it1 -> Log.e("Erro", it1) }
-                    progress_bar.visibility = View.INVISIBLE
                 }
             })
         }

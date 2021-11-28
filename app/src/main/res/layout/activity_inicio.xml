@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:fontFamily="@font/montserrat"
     android:orientation="vertical"
-    tools:context=".InicioActivity">
+    tools:context=".InicioActivity"
+    >
 
 
     <LinearLayout

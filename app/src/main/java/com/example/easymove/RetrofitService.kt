@@ -14,13 +14,17 @@ interface RetrofitService {
     @GET("api/Empresas")
     suspend fun getEmpresas() : Response<List<Empresas>>
 
+    //https://webapieasymove.herokuapp.com/
+    @GET("api/Mudanca")
+    fun getPedido() : Call<List<Mudanca>>
+
     //https://viacep.com.br/ws/SP/Sao%20Paulo/Avenida%20Lins%20de%20Vasconcelos/json/
     @GET("{estado}/{cidade}/{endereco}/json/")
     fun getRCE(@Path("estado") estado: String,
                @Path("cidade") cidade: String,
                @Path("endereco") endereco: String): Call<List<CEP>>
 
-    @Headers("Content-Type: application/json")
+    @Headers("Accept:application/json","Content-Type:application/json")
     @POST("api/Mudanca")
-    fun addMudanca(@Body userData: Mudanca): Call<Mudanca>
+    fun addMudanca(@Body userData: Mudanca): Call<Void>
 }

@@ -6,7 +6,8 @@
     android:fontFamily="@font/montserrat"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".FinalizarPedido">
+    tools:context=".FinalizarPedido"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -77,14 +78,35 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome da Empresa:"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
         android:id="@+id/txvNomeEmpresa"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo Caminhão:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tipo Caminhão:"
-        android:textColor="@color/black"
+        android:textColor="@android:color/holo_blue_dark"
         android:textSize="20sp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
@@ -101,13 +123,36 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logradouro:"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
         android:id="@+id/txvLogradouro"
         />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Número:"
         android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Número:"
+        android:textColor="@android:color/holo_blue_dark"
         android:textSize="20sp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"

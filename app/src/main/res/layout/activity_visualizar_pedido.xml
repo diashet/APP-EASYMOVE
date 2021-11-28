@@ -1,9 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VisualizarPedidoActivity">
+    android:fontFamily="@font/montserrat"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".VisualizarPedidoActivity"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#00BFFF"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_menu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:baselineAligned="false"
+            android:src="@drawable/menu" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/montserrat"
+            android:layout_gravity="center"
+            android:text="Dados do seu Pedido"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#00BFFF"
+        android:orientation="horizontal">
+
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="#FFFFFF"
+            />
+
+        <EditText
+            android:id="@+id/txn_pesquisar"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="Pesquisar"
+            android:background="#FFFFFF"
+            android:fontFamily="@font/montserrat"
+            android:hint="Pesquisar"
+            android:minHeight="48dp"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/img_microphone"
+            android:layout_width="30dp"
+            android:layout_height="48dp"
+            android:background="#FFFFFF"
+            android:src="@drawable/microphone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome da Empresa:"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/txvNomeEmpresa"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo Caminhão:"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/txvTipoCaminhao"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logradouro:"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/txvLogradouro"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Número:"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/txvNumero"
+        />
+</LinearLayout>
+

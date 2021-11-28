@@ -6,7 +6,8 @@
     android:fontFamily="@font/montserrat"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".EnderecoActivity">
+    tools:context=".EnderecoActivity"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -88,16 +89,6 @@
         android:layout_marginEnd="8dp"
         android:text="Pesquisar com CEP" />
 
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:visibility="invisible" />
 
     <TextView
         android:layout_width="match_parent"
@@ -105,7 +96,7 @@
         android:text="Estado/UF:"
         android:textSize="20sp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:id="@+id/txvUF"
         />

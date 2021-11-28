@@ -1,9 +1,11 @@
 package com.example.easymove
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import retrofit2.Call
 import retrofit2.Callback
@@ -44,12 +46,17 @@ class FinalizarPedido : AppCompatActivity() {
             Log.v("string","string")
             val call = MudancasDAO().retrofitService().addMudanca(mudancaInfo)
             call.enqueue(
-                object : Callback<Mudanca> {
-                    override fun onFailure(call: Call<Mudanca>, t: Throwable) {
-
-                    }
-                    override fun onResponse( call: Call<Mudanca>, response: Response<Mudanca>) {
+                object : Callback<Void> {
+                    override fun onFailure(call: Call<Void>, t: Throwable) {
                         Log.v("string", "passou por aqui")
+                    }
+                    override fun onResponse( call: Call<Void>, response: Response<Void>) {
+                        Log.v("string", "passou por aqui")
+                        Toast.makeText(this@FinalizarPedido, "Pedido Recebido Com Sucesso", Toast.LENGTH_LONG)
+                            .show()
+
+                        val i = Intent(this@FinalizarPedido, VisualizarPedidoActivity::class.java)
+                        startActivity(i)
                     }
                 }
             )

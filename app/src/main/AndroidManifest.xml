@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyMove">
         <activity
+            android:name=".VisualizarPedidoActivity"
+            android:exported="false" />
+        <activity
             android:name=".FinalizarPedido"
             android:exported="false" />
         <activity
